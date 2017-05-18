@@ -1,0 +1,23 @@
+{
+  "NAME":"TweakableLift",
+  "URL":"https://raw.githubusercontent.com/theRagingIrishman/TweakableLift/master/SmartActuation.version",
+  "DOWNLOAD":"https://github.com/theRagingIrishman/TweakableLift/releases/latest",
+  "GITHUB":
+  {
+    "USERNAME":"theRagingIrishman",
+    "REPOSITORY":"TweakableLift",
+    "ALLOW_PRE_RELEASE":false,
+  }
+  "VERSION":
+  {
+    "MAJOR":1,
+    "MINOR":0,
+    "PATCH":0,
+    "BUILD":0
+  },
+  "KSP_VERSION":
+  {
+    "MAJOR":1,
+    "MINOR":2,
+    "PATCH":2
+  }
