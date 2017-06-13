@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
+using System;
 
 namespace TweakableLiftingSurface
 {
 	[KSPAddon(KSPAddon.Startup.MainMenu, false)]
-	public class MCSHook : MonoBehaviour
+	public class TLSHook : MonoBehaviour
 	{
 		public void Start()
 		{
@@ -43,10 +44,17 @@ namespace TweakableLiftingSurface
 
 		public override void OnStart(StartState state)
 		{
-			base.OnStart(state);
-			liftingSurface = part.FindModuleImplementing<ModuleLiftingSurface>();
-			deflectionLiftCoeff = liftingSurface.deflectionLiftCoeff;
-			liftingSurface.deflectionLiftCoeff = deflectionLiftCoeff* oneOrZero;
+			try
+			{
+				base.OnStart(state);
+				liftingSurface = part.FindModuleImplementing<ModuleLiftingSurface>();
+				deflectionLiftCoeff = liftingSurface.deflectionLiftCoeff;
+				liftingSurface.deflectionLiftCoeff = deflectionLiftCoeff * oneOrZero;
+			}
+			catch (Exception ex)
+			{
+				Debug.LogError("PROBLEM.\n" + ex.Message + "\n" + ex.StackTrace);
+			}
 		}
 
 		public void FixedUpdate()

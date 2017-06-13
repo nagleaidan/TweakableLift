@@ -1,2 +1,5 @@
 1.0
 -initial release
+1.1
+-update for 1.3
+-catch game crashing exception
